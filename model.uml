@@ -21,17 +21,24 @@
         </ownedAttribute>
         <ownedOperation xmi:id="_V68ogCeYEem66bDjEq04EQ" name="GameEngine"/>
         <ownedOperation xmi:id="_X_2fgCeYEem66bDjEq04EQ" name="newGame" visibility="private"/>
-        <ownedOperation xmi:id="_cDetACeYEem66bDjEq04EQ" name="playGame"/>
-        <ownedOperation xmi:id="_i62NcCeYEem66bDjEq04EQ" name="isEnd" visibility="public">
+        <ownedOperation xmi:id="_cDetACeYEem66bDjEq04EQ" name="choose">
+          <ownedParameter xmi:id="_QSPJgCjKEem9g6FkBI8arw" name="x">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_QSPJgSjKEem9g6FkBI8arw" name="y">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_i62NcCeYEem66bDjEq04EQ" name="isEnded" visibility="public">
           <ownedParameter xmi:id="_njDHoCeYEem66bDjEq04EQ" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_owsmgCeYEem66bDjEq04EQ" value="1"/>
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_owsmgSeYEem66bDjEq04EQ" value="1"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xmi:id="_YFQfIif0Eem66bDjEq04EQ" name="setEndGame" visibility="private">
+        <ownedOperation xmi:id="_YFQfIif0Eem66bDjEq04EQ" name="setEnded" visibility="private">
           <ownedParameter xmi:id="_YFRGMCf0Eem66bDjEq04EQ" name="isEnded">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
         <ownedOperation xmi:id="_DKz58Cf-Eem66bDjEq04EQ" name="addPlayer"/>
@@ -41,6 +48,7 @@
         <ownedOperation xmi:id="_DKz58yf-Eem66bDjEq04EQ" name="getCurrentPlayer">
           <ownedParameter xmi:id="_DKz59Cf-Eem66bDjEq04EQ" type="_I-qKgCeTEem66bDjEq04EQ" direction="return"/>
         </ownedOperation>
+        <ownedOperation xmi:id="_MNyacCi7Eem9g6FkBI8arw" name="changePlayer"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_HHueECeTEem66bDjEq04EQ" name="Square" visibility="public">
         <ownedAttribute xmi:id="_1DOr8CeUEem66bDjEq04EQ" name="position" visibility="private">
@@ -52,6 +60,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TqPRgSeVEem66bDjEq04EQ" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TqPRgieVEem66bDjEq04EQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Ilsj8ChvEem9g6FkBI8arw" name="isAccessible" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ImcK0ChvEem9g6FkBI8arw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ImcK0ShvEem9g6FkBI8arw" value="1"/>
         </ownedAttribute>
         <ownedOperation xmi:id="_dbkBoCeVEem66bDjEq04EQ" name="Square"/>
         <ownedOperation xmi:id="_qXU4ACeWEem66bDjEq04EQ" name="Square">
@@ -79,6 +92,16 @@
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:id="_QQ5VEChvEem9g6FkBI8arw" name="setAccesible">
+          <ownedParameter xmi:id="_XPsTMChvEem9g6FkBI8arw" name="a">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_SuIMgChvEem9g6FkBI8arw" name="isAccessible">
+          <ownedParameter xmi:id="_VRaBkChvEem9g6FkBI8arw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_I-qKgCeTEem66bDjEq04EQ" name="Player" visibility="public">
         <ownedAttribute xmi:id="_tmjCgCeVEem66bDjEq04EQ" name="character" visibility="private">
@@ -103,7 +126,25 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_fIWlgCeTEem66bDjEq04EQ" name="Grid" visibility="public">
+        <ownedAttribute xmi:id="_YEo-kCi5Eem9g6FkBI8arw" name="winner" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YEo-kSi5Eem9g6FkBI8arw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YEo-kii5Eem9g6FkBI8arw" value="1"/>
+        </ownedAttribute>
         <ownedOperation xmi:id="_HfjycCeXEem66bDjEq04EQ" name="Grid"/>
+        <ownedOperation xmi:id="_gIrGcCi5Eem9g6FkBI8arw" name="setSquares">
+          <ownedParameter xmi:id="_ld5esCi5Eem9g6FkBI8arw" name="squares" type="_HHueECeTEem66bDjEq04EQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_mHxiICi5Eem9g6FkBI8arw" name="getSquares">
+          <ownedParameter xmi:id="_qP0VkCi5Eem9g6FkBI8arw" type="_HHueECeTEem66bDjEq04EQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_zR2WwCi5Eem9g6FkBI8arw" name="checkWinner" visibility="public">
+          <ownedParameter xmi:id="_zR2WwSi5Eem9g6FkBI8arw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zR2Wwii5Eem9g6FkBI8arw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zR2Wwyi5Eem9g6FkBI8arw" value="1"/>
+          </ownedParameter>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_iqasICeVEem66bDjEq04EQ" memberEnd="_iqbTMCeVEem66bDjEq04EQ _iqb6QieVEem66bDjEq04EQ" navigableOwnedEnd="_iqb6QieVEem66bDjEq04EQ">
         <ownedEnd xmi:id="_iqbTMCeVEem66bDjEq04EQ" name="grids" type="_fIWlgCeTEem66bDjEq04EQ" association="_iqasICeVEem66bDjEq04EQ">
@@ -113,16 +154,6 @@
         <ownedEnd xmi:id="_iqb6QieVEem66bDjEq04EQ" name="cases" type="_HHueECeTEem66bDjEq04EQ" aggregation="composite" association="_iqasICeVEem66bDjEq04EQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iqb6QyeVEem66bDjEq04EQ" value="9"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iqchUCeVEem66bDjEq04EQ" value="9"/>
-        </ownedEnd>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Gs2_oCeWEem66bDjEq04EQ" memberEnd="_Gs2_oSeWEem66bDjEq04EQ _Gs2_pCeWEem66bDjEq04EQ" navigableOwnedEnd="_Gs2_oSeWEem66bDjEq04EQ _Gs2_pCeWEem66bDjEq04EQ">
-        <ownedEnd xmi:id="_Gs2_oSeWEem66bDjEq04EQ" name="players" type="_I-qKgCeTEem66bDjEq04EQ" association="_Gs2_oCeWEem66bDjEq04EQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gs2_oieWEem66bDjEq04EQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gs2_oyeWEem66bDjEq04EQ" value="*"/>
-        </ownedEnd>
-        <ownedEnd xmi:id="_Gs2_pCeWEem66bDjEq04EQ" name="grids" type="_fIWlgCeTEem66bDjEq04EQ" association="_Gs2_oCeWEem66bDjEq04EQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gs2_pSeWEem66bDjEq04EQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gs2_pieWEem66bDjEq04EQ" value="*"/>
         </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__6uIACeWEem66bDjEq04EQ" name="Player]"/>
