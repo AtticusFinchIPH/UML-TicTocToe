@@ -181,7 +181,22 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_2X3OgCeSEem66bDjEq04EQ" name="graphiqueMVP">
       <packagedElement xmi:type="uml:Package" xmi:id="_kMhqACeTEem66bDjEq04EQ" name="squarepackage">
-        <packagedElement xmi:type="uml:Package" xmi:id="_7LoDACeTEem66bDjEq04EQ" name="automate"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_7LoDACeTEem66bDjEq04EQ" name="automate">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_IMWUUCl2EemPFdeJkLl4bw" name="IEtatSquare" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_KbGD0Cl2EemPFdeJkLl4bw" name="SquareException" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Qf1NcCl2EemPFdeJkLl4bw" name="AbstractEtatSquare" visibility="public" isAbstract="true">
+            <interfaceRealization xmi:id="_EgoW4Cl-EemPFdeJkLl4bw" client="_Qf1NcCl2EemPFdeJkLl4bw" supplier="_IMWUUCl2EemPFdeJkLl4bw" contract="_IMWUUCl2EemPFdeJkLl4bw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_SoZi0Cl-EemPFdeJkLl4bw" name="EtatDisableSquare" visibility="public">
+            <generalization xmi:id="_f30KcCl-EemPFdeJkLl4bw" general="_Qf1NcCl2EemPFdeJkLl4bw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_Y3C2YCl-EemPFdeJkLl4bw" name="EtatEmptySquare" visibility="public">
+            <generalization xmi:id="_hEy68Cl-EemPFdeJkLl4bw" general="_Qf1NcCl2EemPFdeJkLl4bw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_cs1cMCl-EemPFdeJkLl4bw" name="EtatFilledSquare" visibility="public">
+            <generalization xmi:id="_gas1ECl-EemPFdeJkLl4bw" general="_Qf1NcCl2EemPFdeJkLl4bw"/>
+          </packagedElement>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_M-V2sCeUEem66bDjEq04EQ" name="ViewSquare" visibility="public">
           <interfaceRealization xmi:id="_2nT0kCfmEem66bDjEq04EQ" client="_M-V2sCeUEem66bDjEq04EQ" supplier="_0sGsICfmEem66bDjEq04EQ" contract="_0sGsICfmEem66bDjEq04EQ"/>
         </packagedElement>
@@ -190,7 +205,19 @@
         <packagedElement xmi:type="uml:Interface" xmi:id="_0sGsICfmEem66bDjEq04EQ" name="IViewSquare" visibility="public"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_lrIWACeTEem66bDjEq04EQ" name="gridpackage">
-        <packagedElement xmi:type="uml:Package" xmi:id="__OXxACfmEem66bDjEq04EQ" name="automate"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="__OXxACfmEem66bDjEq04EQ" name="automate">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_c8pkYCl_EemPFdeJkLl4bw" name="IEtatGrid" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_gVehYCl_EemPFdeJkLl4bw" name="GridException" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_nJCf4Cl_EemPFdeJkLl4bw" name="AbstractEtatGrid" visibility="public" isAbstract="true">
+            <interfaceRealization xmi:id="_s6sVcCl_EemPFdeJkLl4bw" client="_nJCf4Cl_EemPFdeJkLl4bw" supplier="_c8pkYCl_EemPFdeJkLl4bw" contract="_c8pkYCl_EemPFdeJkLl4bw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_u-mG4Cl_EemPFdeJkLl4bw" name="EtatGridEndGame" visibility="public">
+            <generalization xmi:id="_5SFv8Cl_EemPFdeJkLl4bw" general="_nJCf4Cl_EemPFdeJkLl4bw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_2M7V0Cl_EemPFdeJkLl4bw" name="EtatGridInGame" visibility="public">
+            <generalization xmi:id="_7ejAcCl_EemPFdeJkLl4bw" general="_nJCf4Cl_EemPFdeJkLl4bw"/>
+          </packagedElement>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_CMpgACfnEem66bDjEq04EQ" name="PresentationGrid" visibility="public"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_F5BEECfnEem66bDjEq04EQ" name="ViewGrid" visibility="public">
           <interfaceRealization xmi:id="_JVSWoCfnEem66bDjEq04EQ" client="_F5BEECfnEem66bDjEq04EQ" supplier="_HcV4ACfnEem66bDjEq04EQ" contract="_HcV4ACfnEem66bDjEq04EQ"/>
@@ -198,14 +225,57 @@
         <packagedElement xmi:type="uml:Interface" xmi:id="_HcV4ACfnEem66bDjEq04EQ" name="IViewGrid" visibility="public"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_KUZDMCfnEem66bDjEq04EQ" name="ModelGrid" visibility="public"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_w4Y4oCeTEem66bDjEq04EQ" name="globalpackage">
-        <packagedElement xmi:type="uml:Package" xmi:id="_njLuECfmEem66bDjEq04EQ" name="automate"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_pogb0CfmEem66bDjEq04EQ" name="ViewGlobal" visibility="public">
+      <packagedElement xmi:type="uml:Package" xmi:id="_w4Y4oCeTEem66bDjEq04EQ" name="buttonpackage">
+        <packagedElement xmi:type="uml:Package" xmi:id="_njLuECfmEem66bDjEq04EQ" name="automate">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_bdR50ClzEemPFdeJkLl4bw" name="IEtatButton" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_eeY6YClzEemPFdeJkLl4bw" name="ButtonException" visibility="public"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_hM354ClzEemPFdeJkLl4bw" name="AbstractEtatButton" visibility="public" isAbstract="true">
+            <interfaceRealization xmi:id="_qN840ClzEemPFdeJkLl4bw" client="_hM354ClzEemPFdeJkLl4bw" supplier="_bdR50ClzEemPFdeJkLl4bw" contract="_bdR50ClzEemPFdeJkLl4bw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_khfsUClzEemPFdeJkLl4bw" name="EtatActiveButton" visibility="public">
+            <generalization xmi:id="_pEMbcClzEemPFdeJkLl4bw" general="_hM354ClzEemPFdeJkLl4bw"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_moWEEClzEemPFdeJkLl4bw" name="EtatDisableButton" visibility="public">
+            <generalization xmi:id="_pqowYClzEemPFdeJkLl4bw" general="_hM354ClzEemPFdeJkLl4bw"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_pogb0CfmEem66bDjEq04EQ" name="ViewButton" visibility="public">
           <interfaceRealization xmi:id="_zld0MCfmEem66bDjEq04EQ" client="_pogb0CfmEem66bDjEq04EQ" supplier="_xB1Z0CfmEem66bDjEq04EQ" contract="_xB1Z0CfmEem66bDjEq04EQ"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_rcIVkCfmEem66bDjEq04EQ" name="ModelGlobal" visibility="public"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_ulYlgCfmEem66bDjEq04EQ" name="PresentationGlobal" visibility="public"/>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_xB1Z0CfmEem66bDjEq04EQ" name="IViewGlobal" visibility="public"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_rcIVkCfmEem66bDjEq04EQ" name="ModelButton" visibility="public">
+          <ownedAttribute xmi:id="_Fiuo4CmFEemPFdeJkLl4bw" name="clickable" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Flnk0CmFEemPFdeJkLl4bw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fl4DgCmFEemPFdeJkLl4bw" value="1"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_N-EdgCmFEemPFdeJkLl4bw" name="ModelButton"/>
+          <ownedOperation xmi:id="_PdaJUCmFEemPFdeJkLl4bw" name="setClickable">
+            <ownedParameter xmi:id="_Tzn7oCmFEemPFdeJkLl4bw" name="clickable">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Vx60UCmFEemPFdeJkLl4bw" name="isClickable">
+            <ownedParameter xmi:id="_YceWECmFEemPFdeJkLl4bw" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ulYlgCfmEem66bDjEq04EQ" name="PresentationButton" visibility="public"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_xB1Z0CfmEem66bDjEq04EQ" name="IViewButton" visibility="public"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_z04cMCmGEemPFdeJkLl4bw" name="IObservers">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_5VYQUCmGEemPFdeJkLl4bw" name="IObserverOfSquare" visibility="public">
+          <ownedOperation xmi:id="_OxrZ0CmHEemPFdeJkLl4bw" name="updateFromSquare"/>
+          <ownedOperation xmi:id="_RhTo0CmHEemPFdeJkLl4bw" name="subscribeToSquare"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_-SwwUCmGEemPFdeJkLl4bw" name="IObserverOfButton" visibility="public">
+          <ownedOperation xmi:id="_Uz0icCmHEemPFdeJkLl4bw" name="subscribeToButton"/>
+          <ownedOperation xmi:id="_U0AIoCmHEemPFdeJkLl4bw" name="updateFromButton"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_B0S9YCmHEemPFdeJkLl4bw" name="IObserverOfGrid" visibility="public">
+          <ownedOperation xmi:id="_VHAkMCmHEemPFdeJkLl4bw" name="subscribeToGrid"/>
+          <ownedOperation xmi:id="_VHAkMSmHEemPFdeJkLl4bw" name="updateFromGrid"/>
+        </packagedElement>
       </packagedElement>
     </packagedElement>
   </packagedElement>
