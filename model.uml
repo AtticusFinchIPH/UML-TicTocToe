@@ -182,67 +182,248 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_2X3OgCeSEem66bDjEq04EQ" name="graphiqueMVP">
       <packagedElement xmi:type="uml:Package" xmi:id="_kMhqACeTEem66bDjEq04EQ" name="squarepackage">
         <packagedElement xmi:type="uml:Package" xmi:id="_7LoDACeTEem66bDjEq04EQ" name="automate">
-          <packagedElement xmi:type="uml:Interface" xmi:id="_IMWUUCl2EemPFdeJkLl4bw" name="IEtatSquare" visibility="public"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_IMWUUCl2EemPFdeJkLl4bw" name="IEtatSquare" visibility="public">
+            <ownedOperation xmi:id="_d-YoUC0bEem5lrW-y4t6Aw" name="choose"/>
+            <ownedOperation xmi:id="_gS8E4C0bEem5lrW-y4t6Aw" name="newgame"/>
+            <ownedOperation xmi:id="_gS8E4S0bEem5lrW-y4t6Aw" name="endgame"/>
+          </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_KbGD0Cl2EemPFdeJkLl4bw" name="SquareException" visibility="public"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_Qf1NcCl2EemPFdeJkLl4bw" name="AbstractEtatSquare" visibility="public" isAbstract="true">
+            <ownedAttribute xmi:id="_p34l5C0bEem5lrW-y4t6Aw" name="modelSquares" type="_RV2CcCeUEem66bDjEq04EQ" association="_p34l4C0bEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p34l5S0bEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p34l5i0bEem5lrW-y4t6Aw" value="1"/>
+            </ownedAttribute>
             <interfaceRealization xmi:id="_EgoW4Cl-EemPFdeJkLl4bw" client="_Qf1NcCl2EemPFdeJkLl4bw" supplier="_IMWUUCl2EemPFdeJkLl4bw" contract="_IMWUUCl2EemPFdeJkLl4bw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_SoZi0Cl-EemPFdeJkLl4bw" name="EtatDisableSquare" visibility="public">
             <generalization xmi:id="_f30KcCl-EemPFdeJkLl4bw" general="_Qf1NcCl2EemPFdeJkLl4bw"/>
+            <ownedOperation xmi:id="_1ymEYC0bEem5lrW-y4t6Aw" name="newgame"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_Y3C2YCl-EemPFdeJkLl4bw" name="EtatEmptySquare" visibility="public">
             <generalization xmi:id="_hEy68Cl-EemPFdeJkLl4bw" general="_Qf1NcCl2EemPFdeJkLl4bw"/>
+            <ownedOperation xmi:id="_z88xYC0bEem5lrW-y4t6Aw" name="choose"/>
+            <ownedOperation xmi:id="_z89YcC0bEem5lrW-y4t6Aw" name="endgame"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_cs1cMCl-EemPFdeJkLl4bw" name="EtatFilledSquare" visibility="public">
             <generalization xmi:id="_gas1ECl-EemPFdeJkLl4bw" general="_Qf1NcCl2EemPFdeJkLl4bw"/>
+            <ownedOperation xmi:id="_wpif4C0bEem5lrW-y4t6Aw" name="endgame"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_p34l4C0bEem5lrW-y4t6Aw" name="modelSquare" memberEnd="_p34l4S0bEem5lrW-y4t6Aw _p34l5C0bEem5lrW-y4t6Aw">
+            <ownedEnd xmi:id="_p34l4S0bEem5lrW-y4t6Aw" name="abstractEtatSquares" type="_Qf1NcCl2EemPFdeJkLl4bw" association="_p34l4C0bEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p34l4i0bEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p34l4y0bEem5lrW-y4t6Aw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_3swD8C0bEem5lrW-y4t6Aw" name="pres_view_Square" memberEnd="_3swD8S0bEem5lrW-y4t6Aw _3swD9C0bEem5lrW-y4t6Aw" navigableOwnedEnd="_3swD8S0bEem5lrW-y4t6Aw _3swD9C0bEem5lrW-y4t6Aw">
+            <ownedEnd xmi:id="_3swD8S0bEem5lrW-y4t6Aw" name="abstractEtatSquares" type="_Qf1NcCl2EemPFdeJkLl4bw" association="_3swD8C0bEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3swD8i0bEem5lrW-y4t6Aw" value="4"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3swD8y0bEem5lrW-y4t6Aw" value="4"/>
+            </ownedEnd>
+            <ownedEnd xmi:id="_3swD9C0bEem5lrW-y4t6Aw" name="presSquare" type="_PesTkCeUEem66bDjEq04EQ" association="_3swD8C0bEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3swD9S0bEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3swD9i0bEem5lrW-y4t6Aw" value="1"/>
+            </ownedEnd>
           </packagedElement>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_M-V2sCeUEem66bDjEq04EQ" name="ViewSquare" visibility="public">
+          <ownedAttribute xmi:id="_LS2O5C0eEem5lrW-y4t6Aw" name="presSquare" type="_PesTkCeUEem66bDjEq04EQ" association="_LS2O4C0eEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LS2O5S0eEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LS2O5i0eEem5lrW-y4t6Aw" value="1"/>
+          </ownedAttribute>
           <interfaceRealization xmi:id="_2nT0kCfmEem66bDjEq04EQ" client="_M-V2sCeUEem66bDjEq04EQ" supplier="_0sGsICfmEem66bDjEq04EQ" contract="_0sGsICfmEem66bDjEq04EQ"/>
+          <ownedOperation xmi:id="_TFfr0C0eEem5lrW-y4t6Aw" name="ViewSquare"/>
+          <ownedOperation xmi:id="_VB2q0C0eEem5lrW-y4t6Aw" name="setPresSquare"/>
+          <ownedOperation xmi:id="_gH2H0C0eEem5lrW-y4t6Aw" name="initPaintSquare"/>
+          <ownedOperation xmi:id="_jM6bUC0eEem5lrW-y4t6Aw" name="drawSquare"/>
+          <ownedOperation xmi:id="_lpzUgC0eEem5lrW-y4t6Aw" name="drawChoosen"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_PesTkCeUEem66bDjEq04EQ" name="PresentationSquare" visibility="public"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_PesTkCeUEem66bDjEq04EQ" name="PresentationSquare" visibility="public">
+          <ownedAttribute xmi:id="_sHE59C0eEem5lrW-y4t6Aw" name="viewSquares" type="_0sGsICfmEem66bDjEq04EQ" association="_sHE58C0eEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sHE59S0eEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sHE59i0eEem5lrW-y4t6Aw" value="1"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_2Xk5YC0eEem5lrW-y4t6Aw" client="_PesTkCeUEem66bDjEq04EQ" supplier="_B0S9YCmHEemPFdeJkLl4bw" contract="_B0S9YCmHEemPFdeJkLl4bw"/>
+          <ownedOperation xmi:id="_SQTeUC0gEem5lrW-y4t6Aw" name="PresentationSquare"/>
+          <ownedOperation xmi:id="_cvZTYC0gEem5lrW-y4t6Aw" name="attach"/>
+          <ownedOperation xmi:id="_cvZTYS0gEem5lrW-y4t6Aw" name="getEtatCourant">
+            <ownedParameter xmi:id="_cvZTYi0gEem5lrW-y4t6Aw" type="_bdR50ClzEemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_cvZTYy0gEem5lrW-y4t6Aw" name="notifAllObservers"/>
+          <ownedOperation xmi:id="_cvZTZC0gEem5lrW-y4t6Aw" name="setView"/>
+          <ownedOperation xmi:id="_cvZTZS0gEem5lrW-y4t6Aw" name="setEtatCourant"/>
+          <ownedOperation xmi:id="_fCkP4C0gEem5lrW-y4t6Aw" name="getEtatCourant">
+            <ownedParameter xmi:id="_fCkP4S0gEem5lrW-y4t6Aw" type="_IMWUUCl2EemPFdeJkLl4bw" direction="return">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jloLYC0gEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jloLYS0gEem5lrW-y4t6Aw" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_fTMF0C0gEem5lrW-y4t6Aw" name="getEtatDisableSquare">
+            <ownedParameter xmi:id="_fTMF0S0gEem5lrW-y4t6Aw" type="_IMWUUCl2EemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_rT7T0C0gEem5lrW-y4t6Aw" name="getEtatEmptySquare">
+            <ownedParameter xmi:id="_t48OQC0gEem5lrW-y4t6Aw" type="_IMWUUCl2EemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_uU8NwC0gEem5lrW-y4t6Aw" name="getEtatFilledSquare">
+            <ownedParameter xmi:id="_w0VoYC0gEem5lrW-y4t6Aw" type="_IMWUUCl2EemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_RV2CcCeUEem66bDjEq04EQ" name="ModelSquare" visibility="public"/>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_0sGsICfmEem66bDjEq04EQ" name="IViewSquare" visibility="public"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_0sGsICfmEem66bDjEq04EQ" name="IViewSquare" visibility="public">
+          <ownedOperation xmi:id="_DmN6YC0eEem5lrW-y4t6Aw" name="notifDisable"/>
+          <ownedOperation xmi:id="_H1bs0C0eEem5lrW-y4t6Aw" name="notifCharacter"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_LS2O4C0eEem5lrW-y4t6Aw" name="presSquare" memberEnd="_LS2O4S0eEem5lrW-y4t6Aw _LS2O5C0eEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_LS2O4S0eEem5lrW-y4t6Aw" name="viewSquares" type="_M-V2sCeUEem66bDjEq04EQ" association="_LS2O4C0eEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LS2O4i0eEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LS2O4y0eEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_sHE58C0eEem5lrW-y4t6Aw" name="viewSquare" memberEnd="_sHE58S0eEem5lrW-y4t6Aw _sHE59C0eEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_sHE58S0eEem5lrW-y4t6Aw" name="presSquare" type="_PesTkCeUEem66bDjEq04EQ" association="_sHE58C0eEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sHE58i0eEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sHE58y0eEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_lrIWACeTEem66bDjEq04EQ" name="gridpackage">
         <packagedElement xmi:type="uml:Package" xmi:id="__OXxACfmEem66bDjEq04EQ" name="automate">
-          <packagedElement xmi:type="uml:Interface" xmi:id="_c8pkYCl_EemPFdeJkLl4bw" name="IEtatGrid" visibility="public"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_c8pkYCl_EemPFdeJkLl4bw" name="IEtatGrid" visibility="public">
+            <ownedOperation xmi:id="_26CbUC0gEem5lrW-y4t6Aw" name="endgame"/>
+            <ownedOperation xmi:id="_3bI9QC0gEem5lrW-y4t6Aw" name="pressButton"/>
+          </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_gVehYCl_EemPFdeJkLl4bw" name="GridException" visibility="public"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_nJCf4Cl_EemPFdeJkLl4bw" name="AbstractEtatGrid" visibility="public" isAbstract="true">
+            <ownedAttribute xmi:id="_7x3F5C0gEem5lrW-y4t6Aw" name="modelGrids" type="_KUZDMCfnEem66bDjEq04EQ" association="_7x3F4C0gEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7x3F5S0gEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7x3F5i0gEem5lrW-y4t6Aw" value="1"/>
+            </ownedAttribute>
             <interfaceRealization xmi:id="_s6sVcCl_EemPFdeJkLl4bw" client="_nJCf4Cl_EemPFdeJkLl4bw" supplier="_c8pkYCl_EemPFdeJkLl4bw" contract="_c8pkYCl_EemPFdeJkLl4bw"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_u-mG4Cl_EemPFdeJkLl4bw" name="EtatGridEndGame" visibility="public">
             <generalization xmi:id="_5SFv8Cl_EemPFdeJkLl4bw" general="_nJCf4Cl_EemPFdeJkLl4bw"/>
+            <ownedOperation xmi:id="_EzBkYC0hEem5lrW-y4t6Aw" name="pressButton"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_2M7V0Cl_EemPFdeJkLl4bw" name="EtatGridInGame" visibility="public">
             <generalization xmi:id="_7ejAcCl_EemPFdeJkLl4bw" general="_nJCf4Cl_EemPFdeJkLl4bw"/>
+            <ownedOperation xmi:id="_DLkeYC0hEem5lrW-y4t6Aw" name="endgame"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_7x3F4C0gEem5lrW-y4t6Aw" name="modelGrid" memberEnd="_7x3F4S0gEem5lrW-y4t6Aw _7x3F5C0gEem5lrW-y4t6Aw">
+            <ownedEnd xmi:id="_7x3F4S0gEem5lrW-y4t6Aw" name="abstractEtatGrids" type="_nJCf4Cl_EemPFdeJkLl4bw" association="_7x3F4C0gEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7x3F4i0gEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7x3F4y0gEem5lrW-y4t6Aw" value="1"/>
+            </ownedEnd>
           </packagedElement>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_CMpgACfnEem66bDjEq04EQ" name="PresentationGrid" visibility="public"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_F5BEECfnEem66bDjEq04EQ" name="ViewGrid" visibility="public">
-          <interfaceRealization xmi:id="_JVSWoCfnEem66bDjEq04EQ" client="_F5BEECfnEem66bDjEq04EQ" supplier="_HcV4ACfnEem66bDjEq04EQ" contract="_HcV4ACfnEem66bDjEq04EQ"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_CMpgACfnEem66bDjEq04EQ" name="PresentationGrid" visibility="public">
+          <ownedAttribute xmi:id="_gVCH5C0hEem5lrW-y4t6Aw" name="viewGrids" type="_HcV4ACfnEem66bDjEq04EQ" association="_gVCH4C0hEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gVCH5S0hEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gVCH5i0hEem5lrW-y4t6Aw" value="1"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_cnbNsC0hEem5lrW-y4t6Aw" client="_CMpgACfnEem66bDjEq04EQ" supplier="_-SwwUCmGEemPFdeJkLl4bw" contract="_-SwwUCmGEemPFdeJkLl4bw"/>
+          <ownedOperation xmi:id="_xj_uQC0hEem5lrW-y4t6Aw" name="PresentationGrid"/>
+          <ownedOperation xmi:id="_0fE_UC0hEem5lrW-y4t6Aw" name="setView"/>
+          <ownedOperation xmi:id="_5dJb0C0hEem5lrW-y4t6Aw" name="attach"/>
+          <ownedOperation xmi:id="_5dKC4C0hEem5lrW-y4t6Aw" name="getEtatCourant">
+            <ownedParameter xmi:id="_5dKC4S0hEem5lrW-y4t6Aw" type="_bdR50ClzEemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5dKC4i0hEem5lrW-y4t6Aw" name="notifAllObservers"/>
+          <ownedOperation xmi:id="_5dKC4y0hEem5lrW-y4t6Aw" name="setEtatCourant"/>
+          <ownedOperation xmi:id="_84ao0C0hEem5lrW-y4t6Aw" name="getEtatCourant">
+            <ownedParameter xmi:id="_Gkg6sC0iEem5lrW-y4t6Aw" type="_c8pkYCl_EemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_-8ZSwC0hEem5lrW-y4t6Aw" name="getEtatInGame">
+            <ownedParameter xmi:id="_IGzM0C0iEem5lrW-y4t6Aw" type="_c8pkYCl_EemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Bqf3wC0iEem5lrW-y4t6Aw" name="getEtatEndGame">
+            <ownedParameter xmi:id="_I-zy4C0iEem5lrW-y4t6Aw" type="_c8pkYCl_EemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_HcV4ACfnEem66bDjEq04EQ" name="IViewGrid" visibility="public"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_F5BEECfnEem66bDjEq04EQ" name="ViewGrid" visibility="public">
+          <ownedAttribute xmi:id="_UH3AZC0hEem5lrW-y4t6Aw" name="presGrid" type="_CMpgACfnEem66bDjEq04EQ" association="_UH3AYC0hEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UH3AZS0hEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UH3AZi0hEem5lrW-y4t6Aw" value="1"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_JVSWoCfnEem66bDjEq04EQ" client="_F5BEECfnEem66bDjEq04EQ" supplier="_HcV4ACfnEem66bDjEq04EQ" contract="_HcV4ACfnEem66bDjEq04EQ"/>
+          <ownedOperation xmi:id="_RqJn0C0hEem5lrW-y4t6Aw" name="ViewGrid"/>
+          <ownedOperation xmi:id="_PdFTUC0hEem5lrW-y4t6Aw" name="initEndGame"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_HcV4ACfnEem66bDjEq04EQ" name="IViewGrid" visibility="public">
+          <ownedOperation xmi:id="_KzOzUC0hEem5lrW-y4t6Aw" name="notifEndGame"/>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_KUZDMCfnEem66bDjEq04EQ" name="ModelGrid" visibility="public"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_UH3AYC0hEem5lrW-y4t6Aw" name="presGrid" memberEnd="_UH3AYS0hEem5lrW-y4t6Aw _UH3AZC0hEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_UH3AYS0hEem5lrW-y4t6Aw" name="viewGrids" type="_F5BEECfnEem66bDjEq04EQ" association="_UH3AYC0hEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UH3AYi0hEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UH3AYy0hEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_gVCH4C0hEem5lrW-y4t6Aw" name="viewGrid" memberEnd="_gVCH4S0hEem5lrW-y4t6Aw _gVCH5C0hEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_gVCH4S0hEem5lrW-y4t6Aw" name="presGrids" type="_CMpgACfnEem66bDjEq04EQ" association="_gVCH4C0hEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gVCH4i0hEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gVCH4y0hEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_pvhsYC0hEem5lrW-y4t6Aw" name="pres_etat_Grid" memberEnd="_pvhsYS0hEem5lrW-y4t6Aw _pvhsZC0hEem5lrW-y4t6Aw" navigableOwnedEnd="_pvhsYS0hEem5lrW-y4t6Aw _pvhsZC0hEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_pvhsYS0hEem5lrW-y4t6Aw" name="presGrid" type="_CMpgACfnEem66bDjEq04EQ" association="_pvhsYC0hEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pvhsYi0hEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pvhsYy0hEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_pvhsZC0hEem5lrW-y4t6Aw" name="abstractEtatGrids" type="_nJCf4Cl_EemPFdeJkLl4bw" association="_pvhsYC0hEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pvhsZS0hEem5lrW-y4t6Aw" value="3"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pvhsZi0hEem5lrW-y4t6Aw" value="3"/>
+          </ownedEnd>
+        </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_w4Y4oCeTEem66bDjEq04EQ" name="buttonpackage">
+      <packagedElement xmi:type="uml:Package" xmi:id="_w4Y4oCeTEem66bDjEq04EQ" name="globalpackage">
         <packagedElement xmi:type="uml:Package" xmi:id="_njLuECfmEem66bDjEq04EQ" name="automate">
-          <packagedElement xmi:type="uml:Interface" xmi:id="_bdR50ClzEemPFdeJkLl4bw" name="IEtatButton" visibility="public"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_bdR50ClzEemPFdeJkLl4bw" name="IEtatGlobal" visibility="public">
+            <ownedOperation xmi:id="_oq4HkC0YEem5lrW-y4t6Aw" name="newgame"/>
+            <ownedOperation xmi:id="_qri-0C0YEem5lrW-y4t6Aw" name="endgame"/>
+          </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_eeY6YClzEemPFdeJkLl4bw" name="ButtonException" visibility="public"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_hM354ClzEemPFdeJkLl4bw" name="AbstractEtatButton" visibility="public" isAbstract="true">
+            <ownedAttribute xmi:id="_yRNvsy0YEem5lrW-y4t6Aw" name="modelGlobals" type="_rcIVkCfmEem66bDjEq04EQ" association="_yRNIoC0YEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yRNvtC0YEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yRNvtS0YEem5lrW-y4t6Aw" value="1"/>
+            </ownedAttribute>
             <interfaceRealization xmi:id="_qN840ClzEemPFdeJkLl4bw" client="_hM354ClzEemPFdeJkLl4bw" supplier="_bdR50ClzEemPFdeJkLl4bw" contract="_bdR50ClzEemPFdeJkLl4bw"/>
           </packagedElement>
-          <packagedElement xmi:type="uml:Class" xmi:id="_khfsUClzEemPFdeJkLl4bw" name="EtatActiveButton" visibility="public">
+          <packagedElement xmi:type="uml:Class" xmi:id="_khfsUClzEemPFdeJkLl4bw" name="EtatEnableButton" visibility="public">
             <generalization xmi:id="_pEMbcClzEemPFdeJkLl4bw" general="_hM354ClzEemPFdeJkLl4bw"/>
+            <ownedOperation xmi:id="_3-s28C0YEem5lrW-y4t6Aw" name="newgame"/>
           </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="_moWEEClzEemPFdeJkLl4bw" name="EtatDisableButton" visibility="public">
             <generalization xmi:id="_pqowYClzEemPFdeJkLl4bw" general="_hM354ClzEemPFdeJkLl4bw"/>
+            <ownedOperation xmi:id="_4zph8C0YEem5lrW-y4t6Aw" name="endgame"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_yRNIoC0YEem5lrW-y4t6Aw" name="modelGlobal" memberEnd="_yRNvsC0YEem5lrW-y4t6Aw _yRNvsy0YEem5lrW-y4t6Aw">
+            <ownedEnd xmi:id="_yRNvsC0YEem5lrW-y4t6Aw" name="abstractEtatButtons" type="_hM354ClzEemPFdeJkLl4bw" association="_yRNIoC0YEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yRNvsS0YEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yRNvsi0YEem5lrW-y4t6Aw" value="1"/>
+            </ownedEnd>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_zS3Z8C0YEem5lrW-y4t6Aw" name="pres_view_Global" memberEnd="_zS3Z8S0YEem5lrW-y4t6Aw _zS3Z9C0YEem5lrW-y4t6Aw" navigableOwnedEnd="_zS3Z8S0YEem5lrW-y4t6Aw _zS3Z9C0YEem5lrW-y4t6Aw">
+            <ownedEnd xmi:id="_zS3Z8S0YEem5lrW-y4t6Aw" name="abstractEtatButtons" type="_hM354ClzEemPFdeJkLl4bw" association="_zS3Z8C0YEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zS3Z8i0YEem5lrW-y4t6Aw" value="3"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zS3Z8y0YEem5lrW-y4t6Aw" value="3"/>
+            </ownedEnd>
+            <ownedEnd xmi:id="_zS3Z9C0YEem5lrW-y4t6Aw" name="presGlobals" type="_ulYlgCfmEem66bDjEq04EQ" association="_zS3Z8C0YEem5lrW-y4t6Aw">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zS3Z9S0YEem5lrW-y4t6Aw" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zS3Z9i0YEem5lrW-y4t6Aw" value="1"/>
+            </ownedEnd>
           </packagedElement>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_pogb0CfmEem66bDjEq04EQ" name="ViewButton" visibility="public">
+        <packagedElement xmi:type="uml:Class" xmi:id="_pogb0CfmEem66bDjEq04EQ" name="ViewGlobal" visibility="public">
+          <ownedAttribute xmi:id="_KSkP5C0ZEem5lrW-y4t6Aw" name="presentationGlobals" type="_ulYlgCfmEem66bDjEq04EQ" association="_KSkP4C0ZEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KSkP5S0ZEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KSkP5i0ZEem5lrW-y4t6Aw" value="1"/>
+          </ownedAttribute>
           <interfaceRealization xmi:id="_zld0MCfmEem66bDjEq04EQ" client="_pogb0CfmEem66bDjEq04EQ" supplier="_xB1Z0CfmEem66bDjEq04EQ" contract="_xB1Z0CfmEem66bDjEq04EQ"/>
+          <ownedOperation xmi:id="_mTUk4C0ZEem5lrW-y4t6Aw" name="ViewGlobal"/>
+          <ownedOperation xmi:id="_oZEJYC0ZEem5lrW-y4t6Aw" name="setPresGlobal"/>
+          <ownedOperation xmi:id="_rzyj0C0ZEem5lrW-y4t6Aw" name="initGlobal"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_rcIVkCfmEem66bDjEq04EQ" name="ModelButton" visibility="public">
+        <packagedElement xmi:type="uml:Class" xmi:id="_rcIVkCfmEem66bDjEq04EQ" name="ModelGlobal" visibility="public">
           <ownedAttribute xmi:id="_Fiuo4CmFEemPFdeJkLl4bw" name="clickable" visibility="private">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Flnk0CmFEemPFdeJkLl4bw" value="1"/>
@@ -260,17 +441,61 @@
             </ownedParameter>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_ulYlgCfmEem66bDjEq04EQ" name="PresentationButton" visibility="public"/>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_xB1Z0CfmEem66bDjEq04EQ" name="IViewButton" visibility="public"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ulYlgCfmEem66bDjEq04EQ" name="PresentationGlobal" visibility="public">
+          <ownedAttribute xmi:id="_8x2AZC0ZEem5lrW-y4t6Aw" name="viewGlobals" type="_xB1Z0CfmEem66bDjEq04EQ" association="_8x2AYC0ZEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8x2AZS0ZEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8x2AZi0ZEem5lrW-y4t6Aw" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_DZzy5C0aEem5lrW-y4t6Aw" name="modelGlobal" type="_rcIVkCfmEem66bDjEq04EQ" association="_DZzy4C0aEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DZzy5S0aEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DZzy5i0aEem5lrW-y4t6Aw" value="1"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_nmr0wC0aEem5lrW-y4t6Aw" client="_ulYlgCfmEem66bDjEq04EQ" supplier="_B0S9YCmHEemPFdeJkLl4bw" contract="_B0S9YCmHEemPFdeJkLl4bw"/>
+          <ownedOperation xmi:id="_WhBUUC0aEem5lrW-y4t6Aw" name="PresentationGlobal"/>
+          <ownedOperation xmi:id="_bGXu0C0aEem5lrW-y4t6Aw" name="setView"/>
+          <ownedOperation xmi:id="_gXmX4C0aEem5lrW-y4t6Aw" name="attach"/>
+          <ownedOperation xmi:id="_hc8PUC0aEem5lrW-y4t6Aw" name="notifAllObservers"/>
+          <ownedOperation xmi:id="_xxBh0C0aEem5lrW-y4t6Aw" name="setEtatCourant"/>
+          <ownedOperation xmi:id="_1cPPUC0aEem5lrW-y4t6Aw" name="getEtatCourant">
+            <ownedParameter xmi:id="_GtXY4C0bEem5lrW-y4t6Aw" type="_bdR50ClzEemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_26xC0C0aEem5lrW-y4t6Aw" name="getEtatEnableButton">
+            <ownedParameter xmi:id="_HmpxUC0bEem5lrW-y4t6Aw" type="_bdR50ClzEemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5SIi0C0aEem5lrW-y4t6Aw" name="getEtatDisableButton">
+            <ownedParameter xmi:id="_Ju7scC0bEem5lrW-y4t6Aw" type="_bdR50ClzEemPFdeJkLl4bw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_xB1Z0CfmEem66bDjEq04EQ" name="IViewGlobal" visibility="public">
+          <ownedOperation xmi:id="_Dc8b4C0ZEem5lrW-y4t6Aw" name="notifStartGame"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_KSkP4C0ZEem5lrW-y4t6Aw" name="presGlobal" memberEnd="_KSkP4S0ZEem5lrW-y4t6Aw _KSkP5C0ZEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_KSkP4S0ZEem5lrW-y4t6Aw" name="viewGlobals" type="_pogb0CfmEem66bDjEq04EQ" association="_KSkP4C0ZEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KSkP4i0ZEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KSkP4y0ZEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_8x2AYC0ZEem5lrW-y4t6Aw" name="viewGlobal" memberEnd="_8x2AYS0ZEem5lrW-y4t6Aw _8x2AZC0ZEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_8x2AYS0ZEem5lrW-y4t6Aw" name="presentationGlobals" type="_ulYlgCfmEem66bDjEq04EQ" association="_8x2AYC0ZEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8x2AYi0ZEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8x2AYy0ZEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_DZzy4C0aEem5lrW-y4t6Aw" name="modelGlobal" memberEnd="_DZzy4S0aEem5lrW-y4t6Aw _DZzy5C0aEem5lrW-y4t6Aw">
+          <ownedEnd xmi:id="_DZzy4S0aEem5lrW-y4t6Aw" name="presentationGlobals" type="_ulYlgCfmEem66bDjEq04EQ" association="_DZzy4C0aEem5lrW-y4t6Aw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DZzy4i0aEem5lrW-y4t6Aw" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DZzy4y0aEem5lrW-y4t6Aw" value="1"/>
+          </ownedEnd>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_z04cMCmGEemPFdeJkLl4bw" name="IObservers">
         <packagedElement xmi:type="uml:Interface" xmi:id="_5VYQUCmGEemPFdeJkLl4bw" name="IObserverOfSquare" visibility="public">
           <ownedOperation xmi:id="_OxrZ0CmHEemPFdeJkLl4bw" name="updateFromSquare"/>
           <ownedOperation xmi:id="_RhTo0CmHEemPFdeJkLl4bw" name="subscribeToSquare"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_-SwwUCmGEemPFdeJkLl4bw" name="IObserverOfButton" visibility="public">
-          <ownedOperation xmi:id="_Uz0icCmHEemPFdeJkLl4bw" name="subscribeToButton"/>
-          <ownedOperation xmi:id="_U0AIoCmHEemPFdeJkLl4bw" name="updateFromButton"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_-SwwUCmGEemPFdeJkLl4bw" name="IObserverOfGlobal" visibility="public">
+          <ownedOperation xmi:id="_Uz0icCmHEemPFdeJkLl4bw" name="subscribeToGlobal"/>
+          <ownedOperation xmi:id="_U0AIoCmHEemPFdeJkLl4bw" name="updateFromGlobal"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_B0S9YCmHEemPFdeJkLl4bw" name="IObserverOfGrid" visibility="public">
           <ownedOperation xmi:id="_VHAkMCmHEemPFdeJkLl4bw" name="subscribeToGrid"/>
